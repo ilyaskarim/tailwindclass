@@ -1,0 +1,40 @@
+{
+  "name": "tailwindclass",
+  "version": "1.0.0",
+  "description": "Tailwind classes are long, easily wrap classes for tailwind",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand --forceExit --detectOpenHandles",
+    "dev": "concurrently -n TS,DevServer  \"npm run watch-ts\" \"node lib/index.js\"  ",
+    "watch-ts": "tsc -w",
+    "build": "yarn tsc",
+    "prettier": "prettier --write src package.json index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilyaskarim/tailwindclass.git"
+  },
+  "keywords": [
+    "vuejs",
+    "reactjs",
+    "tailwindcss",
+    "tailwind-css"
+  ],
+  "author": "ilyaskarim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilyaskarim/tailwindclass/issues"
+  },
+  "homepage": "https://github.com/ilyaskarim/tailwindclass#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/cors": "^2.8.4",
+    "@types/node": "^9.6.7",
+    "concurrently": "^3.6.1",
+    "jest": "^27.4.7",
+    "nodemon": "^1.18.9",
+    "prettier": "^2.3.2",
+    "tslint": "^5.17.0",
+    "typescript": "^4.5.4"
+  }
+}
