@@ -7,7 +7,7 @@
     "test": "jest --runInBand --forceExit --detectOpenHandles",
     "dev": "concurrently -n TS,DevServer  \"npm run watch-ts\" \"node lib/index.js\"  ",
     "watch-ts": "tsc -w",
-    "build": "yarn tsc",
+    "build": "yarn tsc && yarn prettier",
     "prettier": "prettier --write src package.json index.js"
   },
   "repository": {
@@ -26,7 +26,6 @@
     "url": "https://github.com/ilyaskarim/tailwindclass/issues"
   },
   "homepage": "https://github.com/ilyaskarim/tailwindclass#readme",
-  "dependencies": {},
   "devDependencies": {
     "@types/cors": "^2.8.4",
     "@types/node": "^9.6.7",

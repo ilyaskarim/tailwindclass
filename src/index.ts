@@ -24,14 +24,24 @@ export interface TailwindClassProps {
   before?: Array<string>;
   file?: Array<string>;
 }
+
+const getKey = (key: string) => {
+  if (key === "_2xl") {
+    return "2xl";
+  }
+  return key;
+};
+
 const tailwindclass = (props: TailwindClassProps) => {
+  if (!props) return "";
+
   return Object.keys(props)
     .map((key: string) => {
       if (key === "default") {
         return props.default.trim();
       }
       return props[key]
-        .map((className) => `${key}:${className}`.trim())
+        .map((className) => `${getKey(key)}:${className}`.trim())
         .join(" ")
         .trim();
     })

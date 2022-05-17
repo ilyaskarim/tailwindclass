@@ -1,4 +1,8 @@
-const tailwindclass = require("./../lib/index").default;
+const tailwindclass = require("../index").default;
+
+test("Expect passing nothing doesn't shows error", () => {
+  expect(tailwindclass()).toBe("");
+});
 
 test("Expect function works", () => {
   expect(
@@ -13,4 +17,10 @@ test("Expect function works", () => {
       hover: ["text-red"],
     })
   ).toBe("green blue hover:text-red");
+
+  expect(
+    tailwindclass({
+      _2xl: ["text-red"],
+    })
+  ).toBe("2xl:text-red");
 });
