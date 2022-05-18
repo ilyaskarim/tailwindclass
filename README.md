@@ -94,7 +94,27 @@ export default App;
 
 `2xl` can be written as `_2xl`
 
-<img width="605" alt="Screenshot 2022-05-18 at 9 43 20 PM" src="https://user-images.githubusercontent.com/42450390/169096966-6b79d03a-e0fc-4259-b853-60790d8e1182.png">
+```javascript
+import tailwindclass from "tailwindclass";
+
+function App() {
+  return (
+    <div>
+      <h1
+        className={tailwindclass({
+          default: "text-[red]",
+          hover: ["text-[blue]"],
+          _2xl: ["text-[purple]"]
+        })}
+      >
+        Hello world!
+      </h1>
+    </div>
+  );
+}
+
+export default App;
+```
 
 
 ## Did you find a grammatical mistake in the documentation?
