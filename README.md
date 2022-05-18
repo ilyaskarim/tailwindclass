@@ -14,7 +14,6 @@ Npm
 npm install tailwindclass
 ```
 
-
 Usage:
 
 ```javascript
@@ -43,11 +42,12 @@ export default App;
 This class in tailwind:
 
 
-<img width="870" alt="Screenshot 2022-05-18 at 9 38 23 PM" src="https://user-images.githubusercontent.com/42450390/169096077-9f376e67-c48c-404e-b571-449fd9ce5a3f.png">
+<img width="783" alt="Screenshot 2022-05-18 at 9 50 32 PM" src="https://user-images.githubusercontent.com/42450390/169098378-35e0eac6-84ba-4b48-bbaf-e30fd1bf9eac.png">
 
 Can be converted into something like this:
 
-<img width="649" alt="Screenshot 2022-05-18 at 9 38 48 PM" src="https://user-images.githubusercontent.com/42450390/169096141-77c8d8b0-7eac-43cf-8356-59ceb850385b.png">
+<img width="592" alt="Screenshot 2022-05-18 at 9 51 07 PM" src="https://user-images.githubusercontent.com/42450390/169098487-39887ea2-1810-4f15-8bac-a870ccb05980.png">
+
 
 
 `tailwindclass` is a typed class which supports. This function makes adding classes very easy. 
