@@ -87,7 +87,7 @@ export default App;
 
 
 
-`tailwindclass` is a typed class which supports. This function makes adding classes very easy. 
+`tailwindclass` is a typed function. This function makes adding classes very easy. 
 
 
 **Note** 
