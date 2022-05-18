@@ -42,11 +42,46 @@ export default App;
 This class in tailwind:
 
 
-<img width="783" alt="Screenshot 2022-05-18 at 9 50 32 PM" src="https://user-images.githubusercontent.com/42450390/169098378-35e0eac6-84ba-4b48-bbaf-e30fd1bf9eac.png">
+```javascript
+
+function App() {
+  return (
+    <div>
+      <h1 className="text-[red] hover:text-[blue]" >
+        Hello world!
+      </h1>
+    </div>
+  );
+}
+
+export default App;
+```
+
 
 Can be converted into something like this:
 
-<img width="592" alt="Screenshot 2022-05-18 at 9 51 07 PM" src="https://user-images.githubusercontent.com/42450390/169098487-39887ea2-1810-4f15-8bac-a870ccb05980.png">
+```javascript
+import tailwindclass from "tailwindclass";
+
+function App() {
+  return (
+    <div>
+      <h1
+        className={tailwindclass({
+          default: "text-[red]",
+          hover: ["text-[blue]"],
+          _2xl: ["text-[purple]"]
+        })}
+      >
+        Hello world!
+      </h1>
+    </div>
+  );
+}
+
+export default App;
+```
+
 
 
 
