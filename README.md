@@ -38,6 +38,8 @@ function App() {
 export default App;
 ```
 
+### Why you should use it?
+
 
 This class in tailwind:
 
