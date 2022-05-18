@@ -1,14 +1,14 @@
 {
   "name": "tailwindclass",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tailwind classes are long, easily wrap classes for tailwind",
-  "main": "index.js",
+  "main": "lib/tailwindclass.js",
   "scripts": {
     "test": "jest --runInBand --forceExit --detectOpenHandles",
     "dev": "concurrently -n TS,DevServer  \"npm run watch-ts\" \"node lib/index.js\"  ",
     "watch-ts": "tsc -w",
     "build": "yarn tsc && yarn prettier",
-    "prettier": "prettier --write src package.json index.js"
+    "prettier": "prettier --write src package.json"
   },
   "repository": {
     "type": "git",

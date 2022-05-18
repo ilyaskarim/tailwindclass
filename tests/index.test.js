@@ -1,4 +1,4 @@
-const tailwindclass = require("../index").default;
+const tailwindclass = require("./../lib/tailwindclass").default;
 
 test("Expect passing nothing doesn't shows error", () => {
   expect(tailwindclass()).toBe("");
