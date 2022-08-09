@@ -1,5 +1,3 @@
-// export type ClassType = string[];
-
 export interface TailwindClassProps {
   default?: string;
   hover?: Array<string>;
@@ -23,11 +21,12 @@ export interface TailwindClassProps {
   after?: Array<string>;
   before?: Array<string>;
   file?: Array<string>;
+  [key: string]: Array<string> | string;
 }
 
 const getKey = (key: string) => {
-  if (key === "_2xl") {
-    return "2xl";
+  if (key.startsWith("_")) {
+    return key.substring(1);
   }
   return key;
 };
@@ -37,13 +36,19 @@ const tailwindclass = (props: TailwindClassProps) => {
 
   return Object.keys(props)
     .map((key: string) => {
+      const value = props[key];
       if (key === "default") {
         return props.default.trim();
       }
-      return props[key]
-        .map((className) => `${getKey(key)}:${className}`.trim())
-        .join(" ")
-        .trim();
+
+      if (Array.isArray(value)) {
+        return value
+          .map((className) => `${getKey(key)}:${className}`.trim())
+          .join(" ")
+          .trim();
+      } else {
+        return value.trim();
+      }
     })
     .join(" ")
     .trim();

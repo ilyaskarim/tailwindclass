@@ -21,6 +21,7 @@ export interface TailwindClassProps {
     after?: Array<string>;
     before?: Array<string>;
     file?: Array<string>;
+    [key: string]: Array<string> | string;
 }
 declare const tailwindclass: (props: TailwindClassProps) => string;
 export default tailwindclass;

@@ -23,4 +23,11 @@ test("Expect function works", () => {
       _2xl: ["text-red"],
     })
   ).toBe("2xl:text-red");
+
+
+  expect(
+    tailwindclass({
+      _hover: ["text-red"],
+    })
+  ).toBe("hover:text-red");
 });
