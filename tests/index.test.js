@@ -7,27 +7,32 @@ test("Expect passing nothing doesn't shows error", () => {
 test("Expect function works", () => {
   expect(
     tailwindclass({
-      hover: ["text-red"],
+      hover: "text-red",
     })
   ).toBe("hover:text-red");
 
   expect(
     tailwindclass({
       default: "green blue",
-      hover: ["text-red"],
+      hover: "text-red",
     })
   ).toBe("green blue hover:text-red");
 
   expect(
     tailwindclass({
-      _2xl: ["text-red"],
+      _2xl: "text-red",
     })
   ).toBe("2xl:text-red");
 
+  expect(
+    tailwindclass({
+      _hover: "text-red",
+    })
+  ).toBe("hover:text-red");
 
   expect(
     tailwindclass({
-      _hover: ["text-red"],
+      "group-hover": "text-[red]",
     })
-  ).toBe("hover:text-red");
+  ).toBe("group-hover:text-[red]");
 });

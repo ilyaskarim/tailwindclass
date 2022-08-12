@@ -2,24 +2,23 @@ import tailwindclass from "tailwindclass";
 
 function App() {
   return (
-    <div className={tailwindclass({
-      default: "m-[100px]"
-    })} >
-      <h1
+    <div>
+      <div className="group">
+        <button className="group-hover:bg-[red]">hover</button>
+      </div>
+      <div
         className={tailwindclass({
-          default: "text-[red]",
-          hover: ["text-[blue]","bg-[#eee]"],
-          _2xl: ["text-[purple]"],
+          default: "group",
         })}
       >
-        Hello world!
-      </h1>
-      <button className={tailwindclass({
-        default: "border-[1px] p-2 rounded-[5px] px-4 transition",
-        hover: ["bg-[#eee]"]
-      })} >
-        Hello
-      </button>
+        <button
+          className={tailwindclass({
+            ["group-hover"]: ["bg-[red]"],
+          })}
+        >
+          hover
+        </button>
+      </div>
     </div>
   );
 }

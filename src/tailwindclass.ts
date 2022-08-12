@@ -1,27 +1,34 @@
 export interface TailwindClassProps {
   default?: string;
-  hover?: Array<string>;
-  focus?: Array<string>;
-  active?: Array<string>;
-  first?: Array<string>;
-  last?: Array<string>;
-  odd?: Array<string>;
-  even?: Array<string>;
-  selection?: Array<string>;
-  lg?: Array<string>;
-  sm?: Array<string>;
-  xl?: Array<string>;
-  _2xl?: Array<string>;
-  dark?: Array<string>;
-  print?: Array<string>;
-  ltr?: Array<string>;
-  rtl?: Array<string>;
-  open?: Array<string>;
-  placeholder?: Array<string>;
-  after?: Array<string>;
-  before?: Array<string>;
-  file?: Array<string>;
-  [key: string]: Array<string> | string;
+  hover?: string;
+  focus?: string;
+  active?: string;
+  first?: string;
+  last?: string;
+  odd?: string;
+  even?: string;
+  selection?: string;
+  lg?: string;
+  sm?: string;
+  xl?: string;
+  _2xl?: string;
+  dark?: string;
+  print?: string;
+  ltr?: string;
+  rtl?: string;
+  open?: string;
+  marker?: string;
+  placeholder?: string;
+  after?: string;
+  before?: string;
+  file?: string;
+  backdrop?: string;
+  landscape?: string;
+  portrait?: string;
+  "group-hover"?: string;
+  "first-line"?: string;
+  "first-letter"?: string;
+  [key: string]: string;
 }
 
 const getKey = (key: string) => {
@@ -41,14 +48,13 @@ const tailwindclass = (props: TailwindClassProps) => {
         return props.default.trim();
       }
 
-      if (Array.isArray(value)) {
-        return value
-          .map((className) => `${getKey(key)}:${className}`.trim())
-          .join(" ")
-          .trim();
-      } else {
-        return value.trim();
-      }
+      const parsedValue = value
+        .trim()
+        .split(" ")
+        .map((v) => `${getKey(key)}:${v}`)
+        .join(" ");
+
+      return parsedValue.trim();
     })
     .join(" ")
     .trim();

@@ -1,6 +1,6 @@
 {
   "name": "tailwindclass",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Tailwind classes are long, easily wrap classes for tailwind",
   "main": "lib/tailwindclass.js",
   "scripts": {
